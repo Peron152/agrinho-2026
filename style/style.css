@@ -1,0 +1,279 @@
+@import url("style/header.css");
+
+:root {
+    /* Paleta de Cores atualizada: Foco em Eco-Tech (Tecnologia + Agro) */
+    --verde-profundo: #1b5e20;
+    --verde-medio: #2c744a;
+    --verde-claro: #64c095;
+    --verde-fundo-suave: #f4fbf7;
+    --laranja-alerta: #FF862A; /* Mantido para destaque de botões */
+    --preto: #111111; /* Um preto levemente suavizado para melhor leitura */
+    --branco: #FFFFFF; 
+    
+    /* Tipografia */
+    --fonte-principal: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding não quebre a largura dos elementos */
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--branco);
+    color: var(--preto);
+    overflow-x: hidden; /* Evita barras de rolagem horizontais indesejadas */
+}
+
+/* =========================================================================
+   CABEÇALHO (Estilos Base / Mobile First)
+   ========================================================================= */
+.cabecalho {
+    background-color: var(--verde-medio);
+    color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.cabecalho-imagem {
+    width: 60px; /* Tamanho fixo menor evita distorções em telas diferentes */
+    height: auto;
+}
+
+.cabecalho ul {
+    list-style: none;
+}
+
+.cabecalho-lista-item {
+    display: block;
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+/* =========================================================================
+   SEÇÕES AGRO (Big Data)
+   ========================================================================= */
+.agro {
+    background-image: linear-gradient(135deg, var(--verde-claro), var(--verde-medio));
+    color: var(--branco);
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha em telas de celular */
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    gap: 40px;
+}
+
+/* Inverte a ordem da imagem e texto alternadamente para um design mais dinâmico */
+.agro:nth-of-type(even) {
+    flex-direction: row-reverse;
+    background-image: linear-gradient(135deg, var(--verde-medio), #1b4d3e);
+}
+
+.agro-div-conteudo {
+    max-width: 500px;
+    flex: 1 1 300px; /* Responsividade fluida */
+}
+
+.agro-titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Linha decorativa abaixo do título */
+.agro-titulo::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--laranja-alerta);
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+.agro-texto-um {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.agro-texto-dois {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.agro-imagem {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra elegante nas fotos */
+    flex: 1 1 300px;
+    object-fit: cover;
+}
+
+/* =========================================================================
+   SEÇÃO ESTUDANTES
+   ========================================================================= */
+.estudante {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: var(--verde-fundo-suave);
+}
+
+.estudante-titulo {
+    color: var(--verde-profundo);
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.estudante-todos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.estudante-div {
+    background: var(--branco);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    width: 220px;
+}
+
+.estudante-imagem {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--verde-claro);
+}
+
+.estudante-nome {
+    font-size: 1.2rem;
+    color: var(--preto);
+    margin-bottom: 10px;
+}
+
+.estudante-icone {
+    width: 24px;
+    height: 24px;
+    margin: 0 8px;
+    transition: transform 0.2s;
+}
+
+.estudante-icone:hover {
+    transform: scale(1.2);
+}
+
+/* =========================================================================
+   RODAPÉ (Institucional)
+   ========================================================================= */
+.rodape {
+    background-color: var(--preto);
+    color: var(--branco);
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.rodape-conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.rodape-imagem {
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.escola-historico {
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.escola-contato {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* =========================================================================
+   ACESSIBILIDADE E COMPONENTES
+   ========================================================================= */
+.menu-acessibilidade {
+    position: fixed;
+    top: 1rem;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Estilização padrão para botões de acessibilidade */
+.btn-primary {
+    background-color: var(--verde-profundo);
+    color: var(--branco);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: var(--fonte-principal);
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--verde-medio);
+}
+
+.rotacao-botao {
+    transform: rotate(0deg); /* Começa normal e o JS pode alterar se necessário */
+    transition: transform 0.3s ease;
+}
+
+.opcoes-acessibilidade {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Alterna a exibição da lista (Invertido a lógica para bater com a classe 'apresenta-lista') */
+.apresenta-lista {
+    display: none;
+}
+
+/* =========================================================================
+   MODO ALTO CONTRASTE (CSS Puro e Forçado)
+   ========================================================================= */
+.alto-contraste {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+.alto-contraste,
+.alto-contraste .cabecalho,
+.alto-contraste .agro,
+.alto-contraste .estudante,
+.alto-contraste .estudante-div,
+.alto-contraste .rodape {
+    background: #000000 !important;
+    background-image: none !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+}
+
+.alto-contraste .btn-primary,
+.alto-contraste .agro-titulo::after {
+    background-color: #FFFF00 !important; /* Amarelo puro para altíssimo contraste */
+    color: #000000 !important;
+}
+
+.alto-contraste .estudante-nome {
+    color: #FFFFFF !important;
+}

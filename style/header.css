@@ -1,0 +1,39 @@
+@media screen and (min-width: 800px) {
+    /* Ajustes estruturais para o cabeçalho em telas maiores */
+    .cabecalho {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 4rem;
+        background-color: #f4fbf7; /* Um fundo verde bem sutil, evocando tecnologia limpa */
+        border-bottom: 2px solid #e0f2e9;
+    }
+
+    /* Ajuste para a lista de títulos do cabeçalho */
+    .cabecalho ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* O item principal (substituindo o antigo h1) */
+    .cabecalho-lista-item:first-child {
+        font-size: 2.5rem; /* Equivalente a 40px, excelente para destaque */
+        font-weight: 700;
+        color: #1b5e20; /* Verde escuro floresta, passa seriedade e eco-tech */
+    }
+
+    /* O subtítulo (segundo item da lista) */
+    .cabecalho-lista-item:last-child {
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: #4b6b58; /* Verde acinzentado para dar contraste */
+    }
+
+    /* Ajuste do posicionamento do menu de acessibilidade no desktop */
+    .menu-acessibilidade {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+}
