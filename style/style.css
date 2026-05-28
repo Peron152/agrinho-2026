@@ -2,11 +2,11 @@
 
 :root {
     /* Paleta de Cores atualizada: Foco em Eco-Tech (Tecnologia + Agro) */
-    --verde-profundo: #1b5e20;
-    --verde-medio: #2c744a;
+    --verde-profundo: #153c83;
+    --verde-medio: #7fd8db;
     --verde-claro: #64c095;
     --verde-fundo-suave: #f4fbf7;
-    --laranja-alerta: #FF862A; /* Mantido para destaque de botões */
+    --laranja-alerta: #ff382a; /* Mantido para destaque de botões */
     --preto: #111111; /* Um preto levemente suavizado para melhor leitura */
     --branco: #FFFFFF; 
     
