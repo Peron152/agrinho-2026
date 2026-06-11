@@ -49,7 +49,7 @@ body {
 }
 
 .cabecalho-lista-item {
-    display: block;
+    display: flex;
     font-size: 1.1rem;
     margin: 5px 0;
 }
